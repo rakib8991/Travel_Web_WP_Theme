@@ -1,0 +1,706 @@
+/*!
+ * Theme Name: HTML5 Blank
+ * Theme URI: http://html5blank.com
+ * Description: HTML5 Blank WordPress Starter Theme
+ * Version: 1.5.0
+ * Author: Robert DeVore
+ * Author URI: http://robertdevore.com
+ * Tags: HTML5, CSS3, starter, framework
+ *
+ * License: MIT
+ * License URI: http://opensource.org/licenses/mit-license.php
+ */
+
+ /*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-shadow */
+*,
+*:after,
+*:before {
+	-moz-box-shadow:border-box;
+	box-shadow:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:300 16px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#000;
+    margin: 0;
+    padding: 0;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+a {
+	color:#444;
+	text-decoration:none;
+}
+a:hover {
+	color:#444;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+/*--------------------------------
+Structure
+----------------------------------*/
+.wrapper{
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+/*header*/
+.header .headercanvas{
+    background-color: rgba(0, 0, 0, .75);
+}
+@media only screen and (min-width: 768px){
+    .header .headercanvas{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: rgba(0, 0, 0, .75);
+    }
+}
+/*header thumbnails */
+.featureadimage{
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*logo*/
+.logo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo-img{
+    max-height: 73px;
+}
+@media only screen and (min-width: 768px){
+    .logo{
+        width: 40%;
+        float: left;
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+/*nav*/
+.nav{
+
+}
+.nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li{
+    padding: 12px;
+    text-align: center;
+}
+.nav ul li.current_page_item {
+    background-color: #df7900;
+}
+.nav ul li a{
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+@media only screen and (min-width: 768px){
+    .nav{
+        height: 73px;
+        width: 60%;
+        float: right;
+    }
+    .nav ul{
+        height: 73px;
+        float: right;
+    }
+    .nav ul li{
+        float: left;
+        padding: 0 15px;
+        height: 100%;
+    }
+    .nav ul li a{
+        line-height: 73px;
+    }
+}
+/*------------------------------
+* Pages
+--------------------------------*/
+/** About Us **/
+h2.page_title{
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 28px;
+    color: #df7900;
+    text-align: center;
+    position: relative;
+    margin: 15px 0;
+    text-transform: capitalize;
+}
+h2.page_title span{
+    background-color: #fff;
+    z-index: 9999;
+}
+h2.page_title::before{
+    content: ' ';
+    display: block;
+    clear: both;
+    background-color: #df7900;
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    z-index: -1;
+}
+h2.page_title::after{
+    content: ' ';
+    display: block;
+    clear: both;
+    background-color: #df7900;
+    height: 2px;
+    width: 40%;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    z-index: -1;
+}
+div.photo{
+    background-color: #fff;
+    display: block;
+    float: left;
+    padding: 10px;
+    margin: 25px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    -webkit-box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    -moz-ox-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+div.photo:nth-child(even){
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    margin-top: -40px;
+}
+div .photo .polored{
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    -webkit-box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    -moz-box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+
+}
+/****** Tours Page ********/
+ul.tours-arcive{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.tours-arcive li{
+    margin: 0 auto 20px 0;
+    padding: 10px;
+}
+ul.tours-arcive li h3{
+    text-transform: capitalize;
+    font-size: 24px;
+    margin: 10px 0;
+}
+ul.tours-arcive li h3 a {
+    color: #df7900;;
+}
+ul.tours-arcive li .featured-tour{
+    position: relative;
+}
+ul.tours-arcive li .featured-tour a.more-info{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #df7900;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+ul.tours-arcive li div.date-price{
+    overflow: hidden;
+}
+ul.tours-arcive li div.date-price p.date{
+    float: left;
+}
+ul.tours-arcive li div.date-price p.price{
+    float: right;
+    color: #df7900;
+    font-weight: bold;
+}
+ul.tours-arcive li div.date-price p{
+    margin: 10px 0;
+    font-size: 16px;
+}
+ul.tours-arcive li div.sort_description ul{
+    list-style: none;
+}
+ul.tours-arcive li div.sort_description ul li{
+    padding: 0;
+    text-transform: capitalize;
+    text-indent: -5px;
+}
+ul.tours-arcive li div.sort_description ul li::before{
+    content: '- ';
+}
+.featured-tour img {
+    width: 100%;
+    height: auto;
+}
+/****** Tour single  *******/
+div.tours-content h2{
+    color: #df7900;
+}
+.post-details{
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+}
+aside.tour-gallery .tour-gallery-content{
+    margin: 0 0 0 25px;
+}
+aside.tour-gallery h3{
+    color: #df7900;
+    margin: 0 0 0 25px;
+    border-bottom: 3px solid rgb(235, 235, 235);
+}
+.tour-gallery-content .gallery{
+    overflow: hidden;
+}
+figure.gallery-item {
+    margin: 10px 0;
+    width: auto;
+    height: 100px;
+    float: left;
+    text-align: center;
+    padding: 0 10px;
+}
+/**** Testimonial ****/
+@media only screen and (min-width: 768px){
+    .testimonial{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+.testimonial ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.testimonial ul > li{
+    border: 1px solid rgb(167, 167, 167);
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+    background-color: rgba(255, 228, 196, 0.699);
+    position: relative;
+}
+.testimonial ul > li h2{
+    color: #000;
+    background-color: #df7900;
+    padding: 0 20px;
+    margin: 0;
+}
+.testimonial ul > li .testimonial_content{
+    padding: 0 20px 20px;
+    margin-left: 70px;
+}
+.testimonial ul > li .testimonial_content::before {
+    content: '"';
+    display: block;
+    clear: both;
+    font-size: 115px;
+    color: #444;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    font-family: 'Space Grotesk', sans-serif;
+}
+.testimonial ul > li .testimonial_content .testimonial_user_info p{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+.testimonial_page_content{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-left: 30px solid #df7900;
+}
+.testimonial_page_content p{
+    padding: 15px 0;
+    margin-left: 10px;
+}
+/**** Blog Arcive Post ******/
+article.arcive_single_post {
+    margin-bottom: 50px;
+    display: block;
+    overflow: hidden;
+}
+.post_arcive_content h3{
+    margin: 15px 0;
+}
+.post_arcive_content h3 a{
+    color: #df7900;
+}
+.arcive_thumbnail{
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    -webkit-box-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+    -moz-ox-shadow: 0px 4px 6px rgb(0, 0, 0, .25);
+}
+@media only screen and (min-width: 768px){
+    .post_arcive_details p{
+        text-align: right;
+        text-transform: capitalize;
+    }
+    .post_arcive_details{
+        padding-right: 25px;
+    }
+}
+/***** single post *****/
+.shear{
+    text-transform: capitalize;
+    color: #df7900;
+}
+.at-share-btn-elements {
+    text-align: right;
+}
+/** Commten Template **/
+
+element.style {
+}
+h3#reply-title {
+    color:#df7900;
+}
+form#commentform p label, form#commentform p input, form#commentform p textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+form#commentform p input, form#commentform p textarea{
+    padding: 10px;
+    border: 1px solid #df7900;
+    border-radius: 5px;
+}
+.comment-form-cookies-consent input#wp-comment-cookies-consent, .comment-form-cookies-consent label {
+    display: inline-block !important;
+    width: auto !important;
+}
+input#submit {
+    background-color: #df7900;
+    color: #fff;
+    font-size: 16px;
+}
+/******* Contact Us Page *******/
+form.wpcf7-form {
+    overflow: hidden;
+}
+article h3.contact_from_title{
+    text-align: center;
+}
+.contact_from_title{
+    color: #df7900;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+form.wpcf7-form p label span input , form.wpcf7-form p label span textarea{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px rgb(0, 0, 0, .25);
+    -webkit-box-shadow: inset 0px 0px 10px rgb(0, 0, 0, .25);
+    -moz-box-shadow: inset 0px 0px 10px rgb(0, 0, 0, .25);
+}
+input.wpcf7-form-control.has-spinner.wpcf7-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #df7900;
+    color: #fff;
+    float: right;
+}
+@media only screen and (min-width: 768px){
+    .wpcf7 form{
+        width: 50%;
+        margin: auto;
+    }
+
+}
+/******* Front Page *************/
+/*slider*/
+section.slider{
+    z-index: -9;
+}
+div.headercanvas{
+    z-index: 99;
+}
+.owl-theme .owl-nav button.owl-prev, .owl-theme .owl-nav button.owl-next {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background: rgb(0, 0, 0, .35);
+    font-size: 18px;
+}
+.owl-theme .owl-nav button.owl-prev:hover, .owl-theme .owl-nav button.owl-next:hover{
+    color: #fff;
+    background: rgb(0, 0, 0, .25);
+}
+.owl-carousel{
+    position: relative;
+}
+.owl-carousel div img{
+    width: 100%;
+    height: auto;
+}
+button.owl-prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+button.owl-next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+/** Upcomming Tours**/
+ul.upcoming-tours{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.upcoming-tours li .tour-cntent{
+    padding: 10px;
+}
+ul.upcoming-tours li .tour-cntent img{
+    position: relative;
+}
+.tour-cntent .more-info{
+    padding: 10px 15px;
+    background-color: #df7900;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.tour-cntent .title-date{
+    text-align: center;
+    background-color: #df7900;
+}
+.tour-cntent .title-date h3,
+.tour-cntent .title-date h3 a,
+.tour-cntent .title-date p{
+    margin: 0;
+    padding: 5px 0;
+    color: #fff;
+}
+/** Tour Tips **/
+.travle-tips-testimonials {
+    width: 100%;
+    display: block;
+}
+.travle-tips ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.travle-tips ul li .post-wrap{
+    padding: 10px 0;
+}
+.post_img a{
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, .25);
+}
+.post_content p{
+    margin: 5px 0 5px 0;
+}
+.post_content p,
+.post_content a{
+    margin-left: 20px;
+}
+.post_content .view-more{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #df7900;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.travle-tips-testimonials .travle-tips h2,
+.travle-tips-testimonials .testimonials-home h2{ 
+    margin: 10px 20px
+}
+/** Testimonials **/
+.testimonials-home ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.testimonials-home ul li .test-home p{
+    margin:  5px 0 5px 75px;
+    padding: 0;
+}
+.testimonials-home ul li{
+    position: relative;
+}
+.test-home{
+    margin-left: 25px;
+}
+.test-home::before {
+    content: '"';
+    display: block;
+    clear: both;
+    font-size: 115px;
+    color: #444;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    font-family: 'Space Grotesk', sans-serif;
+}
+.testimonials-home ul li .test-home p.test_name,
+.testimonials-home ul li .test-home p.test_location{
+    font-weight: bold;
+    text-align: right;
+}
+/** Footer **/
+footer.footer {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding-top: 50px;
+    background-color: #444;
+    color: #fff;
+}
+footer.footer .sidebar-widget h3{
+    margin: 10px 0;
+}
+.sidebar-widget>div>div {
+    padding: 0 10px;
+}
+.widget_travel_tips .recent_blog h3 a,
+.widget_upcoming_travls .upcoming_travls h3 a{
+    color: #fff;
+}
+.recent_blog,
+.upcoming_travls {
+    overflow: hidden;
+    clear: both;
+}
+.recent_blog_thumbnails a,
+.travls_thumbnails a{
+    display: inline-block;
+}
+.recent_blog_thumbnails,
+.travls_thumbnails{
+    width: 50%;
+    float: left;
+}
+.recent_blog_thumbnails a,
+.travls_thumbnails a{
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, .25);
+    -webkit-box-shadow: 0px 0px 10px rgb(0, 0, 0, .25);
+    -moz-box-shadow: 0px 0px 10px rgb(0, 0, 0, .25);
+}
+.upcoming_travls h3,
+.recent_blog h3{
+    width: 40%;
+    float: left;
+    font-size: 16px;
+    padding-left: 5%;
+}
+/* ---------------------
+* GRID 
+-----------------------*/
+[class*='grid']{
+    float: left;
+    position: relative;
+}
+.grid-wrap{
+    overflow: hidden;
+    width: 100%;
+    clear: both;
+}
+@media only screen and (min-width: 768px){
+    .grid2-3{
+        width: 66.6%;
+    }
+    .grid1-3{
+        width: 33.3%;
+    }
+    .grid1-4{
+        width: 25%;
+    }
+    .grid1-2{
+        width: 50%;
+    }
+}
+
